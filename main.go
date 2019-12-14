@@ -158,7 +158,7 @@ func busArrivals(id string) (arrivals SGBusArrivals, err error) {
 		return
 	}
 
-	url := fmt.Sprintf("https://api.mytransport.sg/ltaodataservice/BusArrivalv2/?BusStopCode=%s", id)
+	url := fmt.Sprintf("http://datamall2.mytransport.sg/ltaodataservice/BusArrivalv2?BusStopCode=%s", id)
 
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
